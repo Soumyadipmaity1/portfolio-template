@@ -7,9 +7,9 @@ interface MotionWrapperProps extends HTMLMotionProps<"div"> {
   className?: string;
 }
 
-const MotionWrapper = ({ children, className = "", ...props }: MotionWrapperProps) => {
+const MotionWrapper = ({ children }: MotionWrapperProps) => {
   return (
-    <motion.div {...props} className={className}>
+    <motion.div >
       {children}
     </motion.div>
   );
