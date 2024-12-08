@@ -17,7 +17,12 @@ const BackgroundAnimation = () => {
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-blue-500/20 blur-3xl"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(to right, rgba(147, 51, 234, 0.2), rgba(6, 182, 212, 0.2), rgba(59, 130, 246, 0.2))',
+          filter: 'blur(24px)'
+        }}
       />
       
       {/* Animated orbs */}
