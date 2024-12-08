@@ -15,7 +15,7 @@ export default function About() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
+            <h1 className="text-4xl md:text-5xl text-center sm:text-start font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
               About Me
             </h1>
             <p className="text-gray-400 text-lg">
