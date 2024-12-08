@@ -41,45 +41,54 @@ const SkillsSection: React.FC = () => {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="space-y-8"
-    >
-      <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
-        <FiCode className="text-3xl" />
-        Technical Skills
-      </h2>
+    <div className="space-y-8">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
+          <FiCode className="text-3xl" />
+          Technical Skills
+        </h2>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {skillCategories.map((category, index) => (
-          <motion.div
+          <div 
             key={category.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-colors"
           >
-            <div className="flex items-center gap-3 mb-4 text-purple-400">
-              <span className="text-xl">{category.icon}</span>
-              <h3 className="font-semibold">{category.title}</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {Array.isArray(category.skills) ? (
-                category.skills.map((skill) => (
-                  <span
-                    key={typeof skill === 'string' ? skill : skill.name}
-                    className="px-3 py-1 bg-purple-500/10 rounded-full text-sm text-purple-300"
-                  >
-                    {typeof skill === 'string' ? skill : `${skill.name} (${skill.level})`}
-                  </span>
-                ))
-              ) : null}
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              style={{ height: '100%' }}
+            >
+              <div className="flex items-center gap-3 mb-4 text-purple-400">
+                <span className="text-xl">{category.icon}</span>
+                <h3 className="font-semibold">{category.title}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {Array.isArray(category.skills) ? (
+                  category.skills.map((skill) => (
+                    <motion.div
+                      key={typeof skill === 'string' ? skill : skill.name}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <span className="px-3 py-1 bg-purple-500/10 rounded-full text-sm text-purple-300 inline-block">
+                        {typeof skill === 'string' ? skill : `${skill.name} (${skill.level})`}
+                      </span>
+                    </motion.div>
+                  ))
+                ) : null}
+              </div>
+            </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
