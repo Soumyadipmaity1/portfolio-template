@@ -53,22 +53,14 @@ const ContactGrid = () => {
   };
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="grid grid-cols-1 md:grid-cols-2 gap-6"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {contactInfo.map((info, index) => (
-        <motion.a
+        <a
           key={index}
           href={info.link}
           target="_blank"
           rel="noopener noreferrer"
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="group relative overflow-hidden rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition-all hover:bg-white/10"
+          className="group relative overflow-hidden rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:scale-[1.02] active:scale-[0.98]"
         >
           {/* Background Gradient */}
           <div className={`absolute inset-0 opacity-0 bg-gradient-to-br ${info.color} group-hover:opacity-5 transition-opacity duration-500`} />
@@ -92,9 +84,9 @@ const ContactGrid = () => {
           <div className="absolute bottom-4 right-4 text-purple-400 opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
             <FiSend className="w-5 h-5" />
           </div>
-        </motion.a>
+        </a>
       ))}
-    </motion.div>
+    </div>
   );
 };
 
