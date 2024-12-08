@@ -1,7 +1,7 @@
 'use client';
+import React from 'react'
 import { FiMail, FiPhone, FiGithub, FiLinkedin, FiAward } from 'react-icons/fi';
 import { PiGraduationCap } from 'react-icons/pi';
-import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 
 // Dynamic imports with loading states
@@ -26,12 +26,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <div className="space-y-12">
-      {/* Profile Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        // className="flex items-center gap-6"
+    <section id="about" className="py-20 px-4">
+      
+      <div 
+        className="flex items-center gap-6 animate-fadeIn"
       >
         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-4xl font-bold text-white">
           R
@@ -42,24 +40,19 @@ const AboutSection = () => {
           </h2>
           <p className="text-gray-400 mt-1">AI/ML Enthusiast & Computer Science Student</p>
         </div>
-      </motion.div>
+      </div>
 
       {/* Contact Grid */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+      <div
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
       >
         {contactInfo.map((info, index) => (
-          <motion.div
+          <a
             key={index}
             href={info.link}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
           >
             <span className="text-purple-400 text-xl group-hover:text-purple-300 transition-colors">
               {info.icon}
@@ -67,22 +60,18 @@ const AboutSection = () => {
             <span className="text-gray-300 text-sm group-hover:text-white transition-colors">
               {info.text}
             </span>
-          </motion.div>
+          </a>
         ))}
-      </motion.div>
+      </div>
 
       {/* Education Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
+      <div
         className="space-y-4"
       >
         <div className="flex items-center gap-2 text-xl font-semibold text-purple-300">
           <PiGraduationCap className="text-2xl" />
           <h3>Education</h3>
         </div>
-        
         <div className="bg-white/5 rounded-xl p-6 space-y-4">
           <div className="flex justify-between items-start">
             <div>
@@ -98,14 +87,13 @@ const AboutSection = () => {
               <span className="text-purple-300 text-sm">CGPA: 8.8/10.0</span>
             </div>
           </div>
-          
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <span className="px-3 py-1 bg-purple-500/10 rounded-full text-purple-300">
               2022 - 2026 (Expected)
             </span>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Skills and Other Sections */}
       <div className="space-y-16">
@@ -113,8 +101,8 @@ const AboutSection = () => {
         <CertificationsSection />
         <ExtraCurricularSection />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutSection; 
+export default AboutSection;
