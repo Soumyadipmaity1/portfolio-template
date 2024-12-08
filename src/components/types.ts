@@ -4,7 +4,7 @@ export interface Skill {
 }
 
 export interface SkillCategory {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   skills: (string | Skill)[];
 }
@@ -16,7 +16,7 @@ export interface Certification {
 }
 
 export interface Activity {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   organization: string;
   date?: string;
