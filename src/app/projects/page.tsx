@@ -15,13 +15,13 @@ export default function Projects() {
         animate={{ opacity: 1 }}
         // className="min-h-screen pt-24 sm:pt-32 px-6 pb-12"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto p-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             // className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold sm:mt-32 mt-24 bg-clip-text text-center sm:text-start text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
               My Projects
             </h1>
             <p className="text-gray-400 text-lg">
