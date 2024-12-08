@@ -42,9 +42,8 @@ const ExtraCurricularSection = () => {
       highlight: "Leadership"
     }
   ];
-
   return (
-    <MotionSection className="space-y-8">
+    <MotionSection style={{ marginBottom: '2rem', gap: '2rem', display: 'flex', flexDirection: 'column' }}>
       <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
         <FiStar className="text-3xl" />
         Extra-Curricular Activities
@@ -57,7 +56,16 @@ const ExtraCurricularSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white/5 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all group"
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.05)',
+              borderRadius: '0.75rem',
+              padding: '1.5rem',
+              backdropFilter: 'blur(4px)',
+              transition: 'all',
+            }}
+            whileHover={{
+              backgroundColor: 'rgba(255,255,255,0.1)'
+            }}
           >
             <div className="flex items-start gap-4">
               <div className="text-2xl text-purple-400 mt-1">
