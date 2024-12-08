@@ -9,14 +9,14 @@ export default function Contact() {
     <>
       <BackgroundAnimation />
       <Navigation isOpen={true} />
-      <div className="min-h-screen pt-24 sm:pt-32 px-6 pb-12">
+      <div className="min-h-screen pt-24 sm:pt-32 px-6 sm:pb-12 pb-32">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             // className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
+            <h1 className="text-4xl text-center sm:text-start md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
               Get in Touch
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
