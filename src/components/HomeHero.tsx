@@ -7,7 +7,16 @@ import SocialLinks from './SocialLinks';
 const HomeHero = () => {
   return (
     <motion.div 
-      className="min-h-screen flex flex-col items-center justify-center relative z-10 px-4"
+      style={{
+        minHeight: "100vh",
+        display: "flex", 
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+        zIndex: 10,
+        padding: "0 1rem"
+      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -15,10 +24,10 @@ const HomeHero = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center"
+        style={{ textAlign: 'center' }}
       >
         <motion.div 
-          className="text-sm font-mono text-purple-400 mb-4"
+          style={{ fontSize: '0.875rem', fontFamily: 'monospace', color: '#A78BFA', marginBottom: '1rem' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -26,8 +35,15 @@ const HomeHero = () => {
           Hello, I&apos;m
         </motion.div>
         <motion.h1 
-          className="text-5xl sm:text-7xl font-bold bg-clip-text text-transparent 
-                     bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4"
+          style={{
+            fontSize: '3rem',
+            fontWeight: 'bold',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            backgroundImage: 'linear-gradient(to right, #A855F7, #EC4899, #F43F5E)',
+            marginBottom: '1rem'
+          }}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
@@ -58,15 +74,27 @@ const HomeHero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="flex flex-col items-center gap-6 mt-8"
+        style={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1.5rem',
+          marginTop: '2rem'
+        }}
       >
         <WelcomeButton href="/about" />
         <SocialLinks />
       </motion.div>
-
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t 
-                   from-purple-500/5 to-transparent pointer-events-none"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '6rem',
+          background: 'linear-gradient(to top, rgba(168, 85, 247, 0.05), transparent)',
+          pointerEvents: 'none'
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
