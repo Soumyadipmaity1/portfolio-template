@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import Image from 'next/image';
 import { FiMail, FiPhone, FiGithub, FiLinkedin, FiAward } from 'react-icons/fi';
 import { PiGraduationCap } from 'react-icons/pi';
 import dynamic from 'next/dynamic';
@@ -26,25 +27,36 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="pb-20 sm:pb-5 sm:pt-10 pt-0 px-4">
       
       <div 
-        className="flex items-center gap-6 animate-fadeIn"
+        className="flex items-center gap-6 mb-10 animate-fadeIn "
       >
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-4xl font-bold text-white">
-          R
+        <div className="relative w-24 h-24">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-[2px]">
+            <div className="relative w-full h-full rounded-full overflow-hidden bg-black/40 backdrop-blur-sm">
+              <Image
+                src="/ritika.jpg"
+                alt="Ritika Banerjee"
+                fill
+                sizes="96px"
+                priority
+                className="object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          </div>
         </div>
         <div>
           <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             Ritika Banerjee
           </h2>
-          <p className="text-gray-400 mt-1">AI/ML Enthusiast & Computer Science Student</p>
+          <p className="text-gray-400 my-1 ">AI/ML Enthusiast & Computer Science Student</p>
         </div>
       </div>
 
       {/* Contact Grid */}
       <div
-        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5"
       >
         {contactInfo.map((info, index) => (
           <a
@@ -66,11 +78,11 @@ const AboutSection = () => {
 
       {/* Education Section */}
       <div
-        className="space-y-4"
+        className="space-y-4 pb-10"
       >
-        <div className="flex items-center gap-2 text-xl font-semibold text-purple-300">
-          <PiGraduationCap className="text-2xl" />
-          <h3>Education</h3>
+        <div className="flex items-center gap-2 text-2xl font-semibold text-purple-300">
+          <PiGraduationCap className="text-3xl" />
+          <h3 className='mt-5'>Education</h3>
         </div>
         <div className="bg-white/5 rounded-xl p-6 space-y-4">
           <div className="flex justify-between items-start">
