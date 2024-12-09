@@ -43,8 +43,8 @@ const ExtraCurricularSection = () => {
     }
   ];
   return (
-    <MotionSection style={{ marginBottom: '2rem', gap: '2rem', display: 'flex', flexDirection: 'column' }}>
-      <h2 className="text-2xl font-bold text-purple-400 flex items-center gap-2">
+    <MotionSection style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column' }}>
+      <h2 className="text-2xl font-bold text-purple-400 mb-5 flex items-center gap-2">
         <FiStar className="text-3xl" />
         Extra-Curricular Activities
       </h2>
