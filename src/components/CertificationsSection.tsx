@@ -30,7 +30,7 @@ const CertificationsSection = () => {
         Certifications
       </h2>
 
-      <div className="grid gap-4 bg-white/5 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all group"
+      <div className="grid gap-4 bg-white/5 mt-5 rounded-xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all group"
       >
         {certifications.map((cert, index) => (
           <motion.div
