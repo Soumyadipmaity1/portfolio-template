@@ -9,7 +9,7 @@ export default function Contact() {
     <>
       <BackgroundAnimation />
       <Navigation isOpen={true} />
-      <div className="min-h-screen pt-24 sm:pt-32 px-6 sm:pb-12 pb-32">
+      <div className="min-h-screen pt-14 sm:pt-32 px-6 sm:pb-12 pb-28">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -19,7 +19,7 @@ export default function Contact() {
             <h1 className="text-4xl text-center sm:text-start md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mb-4">
               Get in Touch
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-2xl pb-10 text-center sm:text-left">
               Feel free to reach out to me through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
           </motion.div>
@@ -33,11 +33,11 @@ export default function Contact() {
             transition={{ delay: 0.6 }}
             // className="mt-16 text-center"
           >
-            <p className="text-gray-400">
+            <p className="text-gray-400 mt-10">
               Currently based in{' '}
               <span className="text-purple-400">Bhubaneswar, India</span>
             </p>
-            <p className="text-gray-400 mt-2">
+            <p className="text-yellow-400 mt-2 font-bold text-lg">
               Available for AI/ML projects and collaborations
             </p>
           </motion.div>
